@@ -1,4 +1,9 @@
 import "../Styles/Root.css"
+import Manatee from "./Manatee/Manatee";
+import Narwhal from "./Narwhal/Narwhal";
+import Whale from "./Whale/Whale";
+import { BrowserRouter,Link, Route, Routes } from 'react-router-dom';
+import "../Styles/Root.css";
 function Root() {
     return ( 
     <div className="parent-div">
@@ -9,15 +14,38 @@ function Root() {
         <h4>api data</h4>
       </div>
       <div id="hover-div" className="child-div">
-          <h4>hover on image</h4>
+        <img src ="https://imgnew.outlookindia.com/uploadimage/library/16_9/16_9_5/IMAGE_1689271964.webp" className="image-hover"/>
       </div>
-      <div id="video-div" className="child-div">
+      <div id="video" className="child-div">
         <h4>play video</h4>
       </div>
       <div id="routing-div" className="child-div">
-        <h4>mammals</h4>
+        <h5>mammals</h5>
+        <BrowserRouter>
+        <nav>
+        <ul>
+          <div className="ul-container">
+            <div className="li">
+          <li className="li-mammals"><Link to="/manatee">Manatee </Link></li>
+          </div>
+          <div className="li">
+          <li className="li-mammals"><Link to="/narwhal">Narwhal </Link></li>
+          </div>
+          <div className="li">
+          <li className="li-mammals"><Link to="/whale">Whale </Link></li>
+          </div>
+          </div>
+        </ul>
+        </nav>
+        <Routes>
+          <Route path="/manatee" element = {<Manatee/>}>Manatee</Route>
+          <Route path="/narwhal" element = {<Narwhal/>}>Narwhal</Route>
+          <Route path="/whale" element = {<Whale/>}>Whale</Route>
+        </Routes>
+        </BrowserRouter>
+        
       </div>
-    </div>
+      </div>
      );
 }
 

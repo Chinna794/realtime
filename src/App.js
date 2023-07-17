@@ -4,7 +4,7 @@ function App() {
    <div>
     <Root/>
    </div>
-  );
+   );
 }
 
 export default App;
