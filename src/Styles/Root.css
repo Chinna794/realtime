@@ -24,4 +24,28 @@ img {
 #profile-div{
     background-image: linear-gradient(to right, rgb(108, 98, 98), rgb(36, 34, 34));
 }
+.image-hover{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.image-hover:hover{
+    transform: rotate(360deg);
+    transition: all 0.900s ease-in-out;
+}
 
+#routing-div {
+    overflow: auto;
+    padding: 0%;
+}
+
+.li-mammals {
+    font-size: medium;
+
+}
+
+.ul-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
